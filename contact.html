@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | Happy Accessories By Tota</title>
+    <meta name="description" content="تواصل مع Happy Accessories By Tota - نحن هنا للإجابة على جميع استفساراتك">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 d-none d-md-block">
+<span class="top-text"><i class="fas fa-phone-alt me-2"></i>تواصل معنا: +966 50 000 0000</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="top-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Happy Accessories</span>
+                <span class="brand-sub">By Tota</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#categories">التصنيفات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#products">المنتجات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="custom-order.html">الطلب الخاص</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-actions">
+                    <a href="#" class="btn-search" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="btn-cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <a href="#" class="btn-user" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">تواصل معنا</li>
+                </ol>
+            </nav>
+            <h1>تواصل معنا</h1>
+            <p class="lead">نحن هنا للإجابة على جميع استفساراتك</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Contact Info Cards -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>الهاتف</h4>
+<p>+966 50 000 0000</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>واتساب</h4>
+                    <p>+966 50 000 0000</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>البريد الإلكتروني</h4>
+                    <p>info@happytota.com</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>الموقع</h4>
+                    <p>جدة، المملكة العربية السعودية</p>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form-wrapper">
+                        <h3 class="text-center mb-4">أرسل لنا رسالة</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label">الاسم <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label">البريد الإلكتروني <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label">رقم الهاتف</label>
+                                <input type="tel" class="form-control" name="phone">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label">الموضوع <span class="text-danger">*</span></label>
+                                <select class="form-select" name="subject" required>
+                                    <option value="">اختر الموضوع...</option>
+                                    <option value="استفسار">استفسار عام</option>
+                                    <option value="طلب">طلب منتج</option>
+                                    <option value="شكوى">شكوى</option>
+                                    <option value="اقتراح">اقتراح</option>
+                                    <option value="أخرى">أخرى</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label">الرسالة <span class="text-danger">*</span></label>
+                                <textarea class="form-control" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn-gold" style="padding: 15px 60px; font-size: 1.1rem;">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    إرسال الرسالة
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="text-center mt-5">
+                <h3>تابعنا على وسائل التواصل</h3>
+                <div class="social-links" style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+                    <a href="#" style="width: 60px; height: 60px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; transition: var(--transition-medium);">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" style="width: 60px; height: 60px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; transition: var(--transition-medium);">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" style="width: 60px; height: 60px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; transition: var(--transition-medium);">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" style="width: 60px; height: 60px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; transition: var(--transition-medium);">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Working Hours -->
+            <div class="working-hours" style="background: var(--light-blue); padding: 40px; border-radius: 20px; margin-top: 50px;">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h3><i class="fas fa-clock" style="color: var(--gold-primary);"></i> أوقات العمل</h3>
+                        <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                            <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <strong>السبت - الخميس:</strong>
+                                <span style="float: left;">من 10 ص إلى 10 م</span>
+                            </li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <strong>الجمعة:</strong>
+                                <span style="float: left;">من 2 م إلى 10 م</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div style="background: var(--gold-gradient); width: 150px; height: 150px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-headset" style="font-size: 4rem; color: white;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-brand">
+                            <a href="index.html">
+                                <span class="brand-text">Happy Accessories</span>
+                                <span class="brand-sub">By Tota</span>
+                            </a>
+                            <p>اكسسوارات فضة مطلية ذهب راقية ومميزة. نصنع الفخامة بأنامل عربية.</p>
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4>روابط سريعة</h4>
+                            <ul>
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="index.html#products">المنتجات</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="contact.html">تواصل معنا</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4>التصنيفات</h4>
+                            <ul>
+                                <li><a href="#">عقود</a></li>
+                                <li><a href="#">حلقان</a></li>
+                                <li><a href="#">أساور</a></li>
+                                <li><a href="#">خواتم</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-contact">
+                            <h4>تواصل معنا</h4>
+                            <ul>
+<li><i class="fas fa-map-marker-alt"></i> جدة، المملكة العربية السعودية</li>
+                                <li><i class="fas fa-phone-alt"></i> +966 50 000 0000</li>
+                                <li><i class="fas fa-envelope"></i> info@happytota.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">جميع الحقوق محفوظة © 2024 Happy Accessories By Tota</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">بحث في المنتجات</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control search-input" placeholder="ابحث عن منتج...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تسجيل الدخول / إنشاء حساب</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#login">تسجيل الدخول</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#register">إنشاء حساب</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-3">
+                        <div class="tab-pane fade show active" id="login">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">كلمة المرور</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn-gold w-100">تسجيل الدخول</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">الاسم</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">كلمة المرور</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn-gold w-100">إنشاء حساب</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

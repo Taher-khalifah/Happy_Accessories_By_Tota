@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الطلب الخاص | Happy Accessories By Tota</title>
+    <meta name="description" content="اطلب نفس القطعة بالذهب الخالص 24 قيراط - Happy Accessories By Tota">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .gold-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #D4AF37, #F4E4BC, #D4AF37);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+        
+        .order-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .order-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            right: 50px;
+            height: 3px;
+            background: #E8F4F8;
+            z-index: 0;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 10px;
+        }
+        
+        .step.active .step-number {
+            box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.2);
+        }
+        
+        .step-title {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .step-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        .material-option-card {
+            background: var(--bg-light);
+            border: 2px solid transparent;
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            text-align: center;
+        }
+        
+        .material-option-card:hover,
+        .material-option-card.selected {
+            border-color: var(--gold-primary);
+            background: var(--gold-light);
+        }
+        
+        .material-option-card i {
+            font-size: 2rem;
+            color: var(--gold-primary);
+            margin-bottom: 10px;
+        }
+        
+        .price-note {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(244, 228, 188, 0.3));
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .price-note i {
+            color: var(--gold-primary);
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 d-none d-md-block">
+<span class="top-text"><i class="fas fa-phone-alt me-2"></i>تواصل معنا: +966 50 000 0000</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="top-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Happy Accessories</span>
+                <span class="brand-sub">By Tota</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#categories">التصنيفات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#products">المنتجات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="custom-order.html">الطلب الخاص</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-actions">
+                    <a href="#" class="btn-search" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="btn-cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <a href="#" class="btn-user" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, var(--gold-light) 0%, var(--marble-white) 100%);">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">الطلب الخاص</li>
+                </ol>
+            </nav>
+            <h1><i class="fas fa-crown" style="color: var(--gold-primary);"></i> الطلب الخاص</h1>
+            <p class="lead">اطلب نفس القطعة بالذهب الخالص 24 قيراط</p>
+        </div>
+    </section>
+
+    <!-- Custom Order Section -->
+    <section class="custom-order-section">
+        <div class="container">
+            <!-- Gold Badge -->
+            <div class="text-center mb-4">
+                <div class="gold-badge">
+                    <i class="fas fa-gem"></i>
+                    <span>متوفر بالذهب حسب الطلب</span>
+                </div>
+            </div>
+            
+            <!-- Order Steps -->
+            <div class="order-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">اختر المنتج</div>
+                    <div class="step-desc">من الموقع</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-title">املأ البيانات</div>
+                    <div class="step-desc">وضح طلبك</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">تأكيد الطلب</div>
+                    <div class="step-desc">واتساب</div>
+                </div>
+            </div>
+            
+            <!-- Price Note -->
+            <div class="price-note">
+                <p class="mb-0">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>ملاحظة هامة:</strong> سعر الذهب يحدد حسب سعر السوق وقت الطلب. 
+                    سنقوم بارسال السعر النهائي لك عبر الواتساب قبل التأكيد.
+                </p>
+            </div>
+            
+            <!-- Order Form -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="customOrderForm" class="order-form">
+                        <!-- Product Selection -->
+                        <div class="mb-4">
+                            <label class="form-label">اختر المنتج المطلوب بالذهب <span class="text-danger">*</span></label>
+                            <select class="form-select" name="product" required>
+                                <option value="">اختر المنتج...</option>
+                                <optgroup label="عقود">
+                                    <option value="عقد فيونكة ذهبي">عقد فيونكة ذهبي</option>
+                                    <option value="عقد قلب ذهبي">عقد قلب ذهبي</option>
+                                    <option value="عقد القمر والنجوم">عقد القمر والنجوم</option>
+                                    <option value="عقد链条 ذهبي">عقد链条 ذهبي</option>
+                                </optgroup>
+                                <optgroup label="حلقان">
+                                    <option value="حلقان كرستاله">حلقان كرستاله</option>
+                                    <option value="حلقانcircle ذهبي">حلقانcircle ذهبي</option>
+                                    <option value="حلقان فراشات">حلقان فراشات</option>
+                                    <option value="حلقان ت-drop">حلقان ت-drop</option>
+                                </optgroup>
+                                <optgroup label="أساور">
+                                    <option value="سوار tennis ذهبي">سوار tennis ذهبي</option>
+                                    <option value="سوار أس.chain">سوار أس.chain</option>
+                                    <option value="سوار heart المفتوح">سوار heart المفتوح</option>
+                                </optgroup>
+                                <optgroup label="خواتم">
+                                    <option value="خاتم princess">خاتم princess</option>
+                                    <option value="خاتم solitair">خاتم solitair</option>
+                                    <option value="خاتم infinity">خاتم infinity</option>
+                                    <option value="خاتم stackable ذهبي">خاتم stackable ذهبي</option>
+                                </optgroup>
+                                <optgroup label="تعاليق">
+                                    <option value="تعليق cross ذهبي">تعليق cross ذهبي</option>
+                                    <option value="تعليق horseshoe">تعليق horseshoe</option>
+                                    <option value="تعليق evil eye">تعليق evil eye</option>
+                                    <option value="تعليق INITIAL字母">تعليق INITIAL字母</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <!-- Material Selection -->
+                        <div class="mb-4">
+                            <label class="form-label">نوع المعدن <span class="text-danger">*</span></label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="material-option-card selected" onclick="selectMaterial(this, 'gold-plated')">
+                                        <i class="fas fa-gem"></i>
+                                        <h5>فضة مطلية ذهب</h5>
+                                        <p class="mb-0 text-muted">السعر الأساسي</p>
+                                        <input type="radio" name="material" value="gold-plated" checked style="display: none;">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="material-option-card" onclick="selectMaterial(this, 'gold')">
+                                        <i class="fas fa-crown"></i>
+                                        <h5>ذهب 24 قيراط</h5>
+                                        <p class="mb-0 text-muted">حسب سعر السوق</p>
+                                        <input type="radio" name="material" value="gold" style="display: none;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Size -->
+                        <div class="mb-4">
+                            <label class="form-label">الحجم / المقاس <span class="text-danger">*</span></label>
+                            <select class="form-select" name="size" required>
+                                <option value="">اختر المقاس...</option>
+                                <option value="صغير">صغير</option>
+                                <option value="متوسط">متوسط</option>
+                                <option value="كبير">كبير</option>
+                                <option value="مخصص">مخصص (حدد في الملاحظات)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Quantity -->
+                        <div class="mb-4">
+                            <label class="form-label">الكمية <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" name="quantity" min="1" value="1" required>
+                        </div>
+                        
+                        <!-- Personal Info -->
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label">الاسم <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label">رقم الهاتف <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" name="email">
+                        </div>
+                        
+                        <!-- Notes -->
+                        <div class="mb-4">
+                            <label class="form-label">ملاحظات إضافية</label>
+                            <textarea class="form-control" name="notes" rows="4" placeholder="أي تفاصيل إضافية تريدها..."></textarea>
+                        </div>
+                        
+                        <!-- Delivery -->
+                        <div class="mb-4">
+                            <label class="form-label">طريقة الاستلام <span class="text-danger">*</span></label>
+<select class="form-select" name="delivery" required>
+                                <option value="">اختر...</option>
+                                <option value="توصيل_جدة">توصيل داخلي (جدة)</option>
+                                <option value="شحن_سعودية">شحن لجميع أنحاء السعودية</option>
+                                <option value="استلام_بنفسك">استلام من المتجر</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Address (if delivery) -->
+                        <div class="mb-4" id="addressField" style="display: none;">
+                            <label class="form-label">العنوان</label>
+                            <textarea class="form-control" name="address" rows="2" placeholder="اكتب العنوان بالتفصيل..."></textarea>
+                        </div>
+                        
+                        <!-- Submit -->
+                        <div class="text-center">
+                            <button type="submit" class="btn-gold" style="padding: 15px 60px; font-size: 1.1rem;">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                إرسال الطلب
+                            </button>
+                            <p class="mt-3 text-muted">
+                                <small>سنقوم بالتواصل معك عبر الواتساب لتأكيد السعر والطلب</small>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section" style="padding: 60px 0; background: var(--light-blue);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div style="width: 80px; height: 80px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-ruler-combined" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h4>قياس بالمقاس</h4>
+                        <p class="text-muted">نصنع حسب مقاسك بالضبط</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div style="width: 80px; height: 80px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-certificate" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h4>شهادة أصلية</h4>
+                        <p class="text-muted">ذهب 24 قيراط معتمد</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div style="width: 80px; height: 80px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-shipping-fast" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h4>توصيل آمن</h4>
+                        <p class="text-muted">تأمين كامل للشحن</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-brand">
+                            <a href="index.html">
+                                <span class="brand-text">Happy Accessories</span>
+                                <span class="brand-sub">By Tota</span>
+                            </a>
+                            <p>اكسسوارات فضة مطلية ذهب راقية ومميزة. نصنع الفخامة بأنامل عربية.</p>
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4>روابط سريعة</h4>
+                            <ul>
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="index.html#products">المنتجات</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="contact.html">تواصل معنا</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4>التصنيفات</h4>
+                            <ul>
+                                <li><a href="#">عقود</a></li>
+                                <li><a href="#">حلقان</a></li>
+                                <li><a href="#">أساور</a></li>
+                                <li><a href="#">خواتم</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-contact">
+                            <h4>تواصل معنا</h4>
+                            <ul>
+<li><i class="fas fa-map-marker-alt"></i> جدة، المملكة العربية السعودية</li>
+                                <li><i class="fas fa-phone-alt"></i> +966 50 000 0000</li>
+                                <li><i class="fas fa-envelope"></i> info@happytota.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">جميع الحقوق محفوظة © 2024 Happy Accessories By Tota</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">بحث في المنتجات</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control search-input" placeholder="ابحث عن منتج...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تسجيل الدخول / إنشاء حساب</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#login">تسجيل الدخول</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#register">إنشاء حساب</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-3">
+                        <div class="tab-pane fade show active" id="login">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">كلمة المرور</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn-gold w-100">تسجيل الدخول</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">الاسم</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">كلمة المرور</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn-gold w-100">إنشاء حساب</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Material selection
+        function selectMaterial(card, value) {
+            document.querySelectorAll('.material-option-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            card.querySelector('input').checked = true;
+        }
+        
+        // Show/hide address field
+        document.querySelector('select[name="delivery"]')?.addEventListener('change', function() {
+            const addressField = document.getElementById('addressField');
+            if (this.value === 'توصيل_domestic' || this.value === 'شحن_egypt') {
+                addressField.style.display = 'block';
+            } else {
+                addressField.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+
